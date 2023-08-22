@@ -4,21 +4,21 @@
 // 1)  checking if sum zero of any pair
 // input -> [-5, -4, -3, -2, 0, 2, 4, 6, 8]
 
-// let arr = [-5, -4, -3, -2, 0, 2, 4, 6, 8]
+let arr = [-5, -4, -3, -2, 0, 2, 4, 6, 8]
 
 
                 //-- straight forward Solution ---\\
 // this solution comes under Big 'O' natation time complexity and Quadratic time o(n^2)
 // which is wrost condition
 
-// for(let i=0; i<arr.length;i++){
-//     for(let j=0;j<arr.length;j++){
-//         let sum = arr[i]+arr[j]
-//         if(sum==0){
-//             console.log(`sum of index ${i} & index ${j} is zero`)
-//         }
-//     }
-// }
+for(let i=0; i<arr.length;i++){
+    for(let j=0;j<arr.length;j++){
+        let sum = arr[i]+arr[j]
+        if(sum==0){
+            console.log(`sum of index ${i} & index ${j} is zero`)
+        }
+    }
+}
 
 
 
@@ -29,30 +29,26 @@
 //  and so on..  
 
 
-// function sum1(arr) {
+function sum1(arr) {
 
-//     let leftCount = 0
-//     let rightCount = arr.length - 1;
-//     while (leftCount < rightCount) {
+    let leftCount = 0
+    let rightCount = arr.length - 1;
+    while (leftCount < rightCount) {
 
-//         let sum = arr[leftCount] + arr[rightCount]
-//         if (sum === 0) {
-//             return [arr[leftCount], arr[rightCount]]
+        let sum = arr[leftCount] + arr[rightCount]
+        if (sum === 0) {
+            return [arr[leftCount], arr[rightCount]]
 
-//         }
-//         else if (sum > 0) {
-//             rightCount--
-//         }
-//         else {
-//             leftCount++
-//         }
-//     }
-// }
-// console.log(sum1(arr));
-
-
+        }
+        else if (sum > 0) {
+            rightCount--
+        }
+        else {
+            leftCount++
+        }
+    }
+}
+console.log(sum1(arr));
 
 
-//------------------------------------------------------------------------------\\
 
-// 2) string Anagram
